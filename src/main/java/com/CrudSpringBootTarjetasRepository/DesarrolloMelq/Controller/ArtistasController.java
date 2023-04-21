@@ -19,7 +19,7 @@ import com.CrudSpringBootTarjetasRepository.DesarrolloMelq.Service.Imp.ArtistasI
 public class ArtistasController {
 	@Autowired
 	ArtistasImp imp;
-	
+/*Controlador*/
 	@GetMapping("getAllArtistas")
 	public List<Artistas> consultaArtistas(){
 		List<Artistas> listaArtistas = imp.consultaArtistas();
