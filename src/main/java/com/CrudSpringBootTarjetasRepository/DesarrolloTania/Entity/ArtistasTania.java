@@ -16,7 +16,7 @@ import lombok.ToString;
 @Setter
 @Entity
 @Table(name = "AAARTISTAS")
-public class Artistas {
+public class ArtistasTania {
 	@Id
 	private int id;
 	private String nombre;

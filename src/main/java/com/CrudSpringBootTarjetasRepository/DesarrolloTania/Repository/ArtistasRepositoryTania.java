@@ -8,18 +8,18 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.CrudSpringBootTarjetasRepository.DesarrolloTania.Entity.Artistas;
+import com.CrudSpringBootTarjetasRepository.DesarrolloTania.Entity.ArtistasTania;
 
 import jakarta.persistence.Id;
 import jakarta.transaction.Transactional;
 
 @Repository
-public interface ArtistasRepository extends JpaRepository<Artistas,Integer>{
+public interface ArtistasRepositoryTania extends JpaRepository<ArtistasTania,Integer>{
 	
 	
 	
 	@Query(value = "SELECT * FROM AAARTISTAS ORDER BY ID DESC",nativeQuery = true)
-	List<Artistas> consultarArtistas();
+	List<ArtistasTania> consultarArtistas();
 	
 	@Modifying
 	@Transactional
