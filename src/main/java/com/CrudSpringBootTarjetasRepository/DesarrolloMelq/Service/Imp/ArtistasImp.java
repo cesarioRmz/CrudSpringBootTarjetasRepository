@@ -17,7 +17,7 @@ public class ArtistasImp implements IArtistas{
 	//private static final String String = null;
 	@Autowired
 	ArtistasRepository artistasRepository;
-	
+	/*Implementacion*/
 	@Override
 	public List<Artistas> consultaArtistas() {
 		List<Artistas> lista = artistasRepository.getAllArtistas();

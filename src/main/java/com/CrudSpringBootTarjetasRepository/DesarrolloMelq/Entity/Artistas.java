@@ -26,4 +26,5 @@ public class Artistas {
 	private String album;
 	private int edad;
 	private int anio_retiro;
+	/*objeto*/
 }

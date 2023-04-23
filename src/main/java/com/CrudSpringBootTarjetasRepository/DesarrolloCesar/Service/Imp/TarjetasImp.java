@@ -23,5 +23,11 @@ public class TarjetasImp implements ITarjetas{
 		List<Tarjetas> lista = tarjetasRepository.getAllTarjetas();
 		return lista;
 	}
+/*
+	@Override
+	public void editar(Tarjetas tarjetas) {
+		tarjetasRepository.updateTarjetas(tarjetas);*/
+		
+	//}
 
 }

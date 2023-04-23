@@ -37,7 +37,7 @@ public interface ArtistasRepository extends JpaRepository<Artistas, Integer>{
 	@Query(value = "SELECT * FROM AAARTISTAS WHERE ID=?1", nativeQuery = true)
     Artistas buscarArtistas (int id);
 	
-	
+	/*Querys*/
 	/*
 	@Query(value = "INSERT INTO AAARTISTAS(ID, NOMBRE, APELLIDOS, GENERO, CANCION_FAMOSA, ALBUM, EDAD, ANIO_RETIRO) VALUES "
 			+ "(:ID, :NOMBRE, :APELLIDOS, :GENERO, :CANCION_FAMOSA, :ALBUM, :EDAD, :ANIO_RETIRO)", nativeQuery=true)

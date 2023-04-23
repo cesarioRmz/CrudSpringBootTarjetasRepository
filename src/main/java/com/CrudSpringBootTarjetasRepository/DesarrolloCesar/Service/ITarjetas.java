@@ -7,4 +7,5 @@ import com.CrudSpringBootTarjetasRepository.DesarrolloCesar.Entity.Tarjetas;
 public interface ITarjetas {
 
 	public List<Tarjetas> consultaTarjetas();
+	//public void editar(Tarjetas tarjetas);
 }

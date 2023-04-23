@@ -3,7 +3,7 @@ package com.CrudSpringBootTarjetasRepository.DesarrolloMelq.Service;
 import java.util.List;
 
 import com.CrudSpringBootTarjetasRepository.DesarrolloMelq.Entity.Artistas;
-
+/*Interface*/
 public interface IArtistas {
 	public List <Artistas> consultaArtistas();
 	public void guardar(Artistas artistas);
