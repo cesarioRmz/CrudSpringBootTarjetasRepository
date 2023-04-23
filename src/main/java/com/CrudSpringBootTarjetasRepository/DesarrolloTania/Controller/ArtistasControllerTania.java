@@ -10,35 +10,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.CrudSpringBootTarjetasRepository.DesarrolloTania.Entity.Artistas;
-import com.CrudSpringBootTarjetasRepository.DesarrolloTania.Service.Imp.ArtistasImp;
+import com.CrudSpringBootTarjetasRepository.DesarrolloTania.Entity.ArtistasTania;
+import com.CrudSpringBootTarjetasRepository.DesarrolloTania.Service.Imp.ArtistasImpTania;
 
 @RestController
-@RequestMapping("Artistas")
+@RequestMapping("ArtistasTania")
 @CrossOrigin
-public class ArtistasController {
+public class ArtistasControllerTania {
 	
 	@Autowired
-	ArtistasImp implementacion;
+	ArtistasImpTania implementacion;
 	
 	@GetMapping("consultar")
-	public List<Artistas> consultaArtistas(){
-		List<Artistas> listarArtistas = implementacion.consultarArtistas();
+	public List<ArtistasTania> consultaArtistas(){
+		List<ArtistasTania> listarArtistas = implementacion.consultarArtistas();
 		return listarArtistas;
 	}
 	
 	@PostMapping("guardar")
-	public void guardar (@RequestBody Artistas artista) {
+	public void guardar (@RequestBody ArtistasTania artista) {
 		implementacion.guardar(artista);
 	}
 	
 	@PostMapping("editar")
-	public void editar (@RequestBody Artistas artista) {
+	public void editar (@RequestBody ArtistasTania artista) {
 		implementacion.editar(artista);
 	}
 	
 	@PostMapping("eliminar")
-	public void eliminar (Artistas artista) {
+	public void eliminar (ArtistasTania artista) {
 		implementacion.eliminar(artista);
 	}
 	
