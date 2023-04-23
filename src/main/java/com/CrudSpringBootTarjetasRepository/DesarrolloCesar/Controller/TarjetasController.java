@@ -22,8 +22,7 @@ public class TarjetasController {
 	
 	@GetMapping("GetAllCards")
 	public List<Tarjetas> consultaTarjetas(){
-		List<Tarjetas> listaTarjetas =  imp.consultaTarjetas();
-		return listaTarjetas;
+		return imp.consultaTarjetas();
 	}
 	
 	
