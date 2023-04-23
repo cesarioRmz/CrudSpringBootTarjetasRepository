@@ -1,4 +1,4 @@
-package com.CrudSpringBootTarjetasRepository.DesarrolloCesar.Controller;
+package com.CrudSpringBootTarjetasRepository.DesarrolloCesar.Entity;
 
 import java.util.List;
 
