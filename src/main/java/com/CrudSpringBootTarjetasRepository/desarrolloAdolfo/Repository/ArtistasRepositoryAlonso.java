@@ -7,19 +7,19 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.CrudSpringBootTarjetasRepository.desarrolloAdolfo.Entity.Artistas;
+import com.CrudSpringBootTarjetasRepository.desarrolloAdolfo.Entity.ArtistasEntity;
 import com.CrudSpringBootTarjetasRepository.desarrolloAdolfo.Entity.Artistas2;
 import com.CrudSpringBootTarjetasRepository.desarrolloAdolfo.Entity.Direccion2;
 
 import jakarta.transaction.Transactional;
 
 @Repository
-public interface ArtistasRepository extends JpaRepository<Artistas,Integer>{
+public interface ArtistasRepositoryAlonso extends JpaRepository<ArtistasEntity,Integer>{
 	
 	
 	
 	@Query(value = "SELECT * FROM AAARTISTAS ORDER BY ID DESC",nativeQuery = true)
-	List<Artistas> consultarArtistas();
+	List<ArtistasEntity> consultarArtistas();
 	
 	@Modifying
 	@Transactional
@@ -45,7 +45,7 @@ public interface ArtistasRepository extends JpaRepository<Artistas,Integer>{
 	
 	
 	@Query(value = "SELECT * FROM AAARTISTAS WHERE ID = ?1", nativeQuery = true)
-	Artistas buscarArtistas(int id);
+	ArtistasEntity buscarArtistas(int id);
 	/////////////////////////////////////////////////////////////////////////////////
 	
 	@Query(value = "SELECT * FROM AAARTISTAS2 WHERE ID = ?1", nativeQuery = true)
