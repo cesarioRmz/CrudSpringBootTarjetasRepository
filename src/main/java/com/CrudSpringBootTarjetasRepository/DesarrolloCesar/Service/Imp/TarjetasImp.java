@@ -23,5 +23,14 @@ public class TarjetasImp implements ITarjetas{
 		List<Tarjetas> lista = tarjetasRepository.getAllTarjetas();
 		return lista;
 	}
+	
+	@Override
+	public void guardar(Tarjetas tarjetas) {
+		
+		tarjetasRepository.guardarTarjetas(tarjetas.getId(),tarjetas.getTipo_tarjeta(),
+				tarjetas.getBanco(), tarjetas.getTitular(),tarjetas.getNumTarjeta()
+				,tarjetas.getFechaVencimiento(), tarjetas.getCvv(), 
+				tarjetas.getSaldo());
+	}
 
 }
