@@ -1,8 +1,8 @@
 package com.CrudSpringBootTarjetasRepository.DesarrolloCesar.Entity;
 
-import java.util.Date;
 
-import jakarta.persistence.Column;
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -18,26 +18,16 @@ import lombok.ToString;
 @Getter
 @Setter
 @Entity
-@Table(name = "AATARJETAS")
+@Table(name = "AAARTISTAS")
 public class Tarjetas {
-
 	@Id
 	private int id;
-	private String tipo_tarjeta;
-	private String banco;
-	private String titular;
-	@Column(name = "NUMTARJETA", columnDefinition="NVARCHAR2(100)")
-	private String numTarjeta;
-	private Date fechaVencimiento;
-	private int cvv;
-	private double saldo;
-	
+	private String nombre;
+	private String apellidos;
+	private String genero;
+	private String cancion_famosa;
+	private String album;
+	private int edad;
+	private int anio_retiro;
+
 }
-/*ID NUMBER PRIMARY KEY,
-TIPO_TARJETA NVARCHAR2(100),
-BANCO NVARCHAR2(100),
-TITULAR NVARCHAR2(100),
-NUMTARJETA NVARCHAR2(100),
-FECHA_VENCIMIENTO DATE,
-CVV NUMBER,
-SALDO NUMBER*/

@@ -1,5 +1,6 @@
 package com.CrudSpringBootTarjetasRepository.DesarrolloCesar.Service.Imp;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,24 +14,31 @@ import lombok.AllArgsConstructor;
 
 @Service
 @AllArgsConstructor(onConstructor = @__(@Autowired))
-public class TarjetasImp implements ITarjetas{
 
-	@Autowired
-	TarjetasRepository tarjetasRepository;
+public class TarjetasImp implements ITarjetas {
 	
+	@Autowired
+	TarjetasRepository TarjetasRepository;
 	@Override
-	public List<Tarjetas> consultaTarjetas() {
-		List<Tarjetas> lista = tarjetasRepository.getAllTarjetas();
+	public List<Tarjetas> consultarArtistas() {
+		List<Tarjetas> lista = TarjetasRepository.consultarArtistas();
 		return lista;
 	}
+
 	
-	@Override
-	public void guardar(Tarjetas tarjetas) {
+	public void guardar(Tarjetas artista) {
+
+		TarjetasRepository.guardarArtistas(artista.getId(), artista.getNombre(), artista.getApellidos(), 
+			artista.getGenero(), artista.getCancion_famosa(), artista.getAlbum(),artista.getEdad(),
+			artista.getAnio_retiro());
+	}
+	
 		
-		tarjetasRepository.guardarTarjetas(tarjetas.getId(),tarjetas.getTipo_tarjeta(),
-				tarjetas.getBanco(), tarjetas.getTitular(),tarjetas.getNumTarjeta()
-				,tarjetas.getFechaVencimiento(), tarjetas.getCvv(), 
-				tarjetas.getSaldo());
+	@Override
+	public void editar(Tarjetas artista) {
+		TarjetasRepository.actualizaArtistas(artista.getId(), artista.getNombre(), artista.getApellidos(), 
+				artista.getGenero(), artista.getCancion_famosa(), artista.getAlbum(),artista.getEdad(),
+				artista.getAnio_retiro());
 	}
 
 }

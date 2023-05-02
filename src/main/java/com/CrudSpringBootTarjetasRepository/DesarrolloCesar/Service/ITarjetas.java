@@ -4,10 +4,11 @@ import java.util.List;
 
 import com.CrudSpringBootTarjetasRepository.DesarrolloCesar.Entity.Tarjetas;
 
+
 public interface ITarjetas {
 
-	public List<Tarjetas> consultaTarjetas();
-
-	void guardar(Tarjetas tarjetas);
+	public List<Tarjetas> consultarArtistas();
+	public void guardar (Tarjetas artista);
+	public void editar (Tarjetas artista);	
 
 }
